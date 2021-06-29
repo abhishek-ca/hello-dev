@@ -6,8 +6,12 @@ shell: bash
 env:
   variables:
     "testEnv" : "testValue1"
+    "major_version": "4"
+    "minor_version": "6"
   exportedVariables:
     - testEnv
+    - major_version
+    - minor_version
 
 # inputArtifacts:
 #   - name: hello-dev-jar
@@ -72,6 +76,8 @@ steps:
     name: "trtdtd"
     command: |
       export testEnv=123
+      export major_version=5
+      export minor_version=1
       echo $testEnv > output1.txt
 
 outputArtifacts:
